@@ -269,3 +269,139 @@ footer{
     padding: 25px 0;
     margin-top: 40px;
 }
+
+/* PAGE TITLE */
+.page-title{
+    text-align: center;
+    padding: 60px 0;
+}
+
+.page-title h2{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.page-title p{
+    color: rgb(19, 18, 18);
+    font-size: 18px;
+}
+
+
+/* BREAKFAST, LUNCH RECIPES, DINNER RECIPES AND SUPPER RECIPES */
+.breakfast-recipes,lunch-recipes,dinner-recipes,supper-recipes{
+    padding-bottom: 60px;
+}
+
+
+/* RECIPE BOX */
+.recipe-box{
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* IMAGE */
+.recipe-box img{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* CONTENT */
+.recipe-content{
+    flex: 1;
+}
+
+
+.recipe-content h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+.recipe-content h3{
+    color: orange;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.recipe-content ul,
+.recipe-content ol{
+    margin-left: 20px;
+}
+
+
+.recipe-content li{
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+/* Center the whole page */
+.subscribe-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8F1F7; /* Light blue background */
+    padding: 20px;
+}
+
+/* The white card in the middle */
+.subscribe-container {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* The main title */
+.subscribe-container h1 {
+    font-size: 28px;
+    color: #0E090A; /* Dark text */
+    margin-bottom: 12px;
+}
+
+/* The paragraph text */
+.subscribe-container p {
+    color: #B4B3B8; /* Gray text */
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/* The email input box */
+.subscribe-container input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E8F1F7;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* The subscribe button */
+.btn-subscribe {
+    width: 100%;
+    padding: 15px;
+    background-color: #180804; /* Orange from your inspo */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Button color when you hover over it */
+.btn-subscribe:hover {
+    background-color: #572B2A; /* Darker brown */
+}
