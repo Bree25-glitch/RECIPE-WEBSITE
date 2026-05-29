@@ -8,44 +8,46 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header class="header">
-
         <div class="container nav-container">
-
             <div class="nav-left">
-
                 <div class="logo">
-                    <i class="fa fa-leaf"></i>
+                    <i class="fas fa-leaf"></i>
                     <h1>Melvine Cooks</h1>
                 </div>
 
-                <nav>
-                    <a href="../index.html">RECIPES</a>
-                    <a href="breakfast.html">BREAKFAST</a>
-                    <a href="lunch.html">LUNCH</a>
-                    <a href="dinner.html">DINNER</a>
-                    <a href="supper.html" class="active">SUPPER</a>
+                <nav class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="breakfast.html" class="nav-link">BREAKFAST</a>
+                    <a href="lunch.html" class="nav-link">LUNCH</a>
+                    <a href="dinner.html" class="nav-link">DINNER</a>
+                    <a href="supper.html" class="nav-link active">SUPPER</a>
                 </nav>
-
             </div>
 
             <div class="nav-right">
-                <button class="btn-subscribe">Subscribe</button>
+                <a href="../subscribe.html" class="btn-subscribe"><i class="fas fa-bell"></i> Subscribe</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
         </div>
-
     </header>
 
     <!-- PAGE TITLE -->
@@ -64,172 +66,114 @@
     </section>
 
     <!-- SUPPER RECIPES -->
-    <section class="supper-recipes">
-
+    <section class="meal-section" id="supper">
         <div class="container">
-
-            <!-- Recipe 1 -->
-            <div class="recipe-box">
-
-                <img src="../images/grilled-chicken.jpg" alt="Grilled Chicken">
-
-                <div class="recipe-content">
-
-                    <h2>Grilled Chicken with Ugali</h2>
-
-                    <h3>Ingredients</h3>
-
-                    <ul>
-                        <li>1 whole chicken</li>
-                        <li>2 cups maize flour</li>
-                        <li>4 cups water</li>
-                        <li>2 onions</li>
-                        <li>2 tomatoes</li>
-                        <li>Cooking oil</li>
-                        <li>Salt</li>
-                    </ul>
-
-                    <h3>How to Cook</h3>
-
-                    <ol>
-                        <li>Season the chicken.</li>
-                        <li>Grill until cooked.</li>
-                        <li>Prepare ugali.</li>
-                        <li>Serve hot.</li>
-                    </ol>
-
-                </div>
-
+            <div class="section-header">
+                <h2>Supper Recipes</h2>
+                <p>Light and satisfying supper ideas.</p>
             </div>
 
-            <!-- Recipe 2 -->
-            <div class="recipe-box">
-
-                <img src="../images/beaf-stew.jpg" alt="Beef Stew">
-
-                <div class="recipe-content">
-
-                    <h2>Beef Stew with Rice</h2>
-
-                    <h3>Ingredients</h3>
-
-                    <ul>
-                        <li>500g beef</li>
-                        <li>2 cups rice</li>
-                        <li>1 onion</li>
-                        <li>2 tomatoes</li>
-                        <li>Salt</li>
-                    </ul>
-
-                    <h3>How to Cook</h3>
-
-                    <ol>
-                        <li>Boil beef until tender.</li>
-                        <li>Cook onions and tomatoes.</li>
-                        <li>Add beef and spices.</li>
-                        <li>Serve with rice.</li>
-                    </ol>
-
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/grilled-chicken.jpg" alt="Grilled Chicken with Ugali">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Grilled Chicken with Ugali</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 50 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Whole chicken</li>
+                            <li>Maize flour</li>
+                            <li>Onions and tomatoes</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Season and grill chicken; prepare ugali and serve together.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Recipe 3 -->
-            <div class="recipe-box">
-
-                <img src="../images/fish-chips.jpg" alt="Fish and Chips">
-
-                <div class="recipe-content">
-
-                    <h2>Fried Fish with Chips</h2>
-
-                    <h3>Ingredients</h3>
-
-                    <ul>
-                        <li>2 whole fish</li>
-                        <li>4 potatoes</li>
-                        <li>Cooking oil</li>
-                        <li>Salt</li>
-                    </ul>
-
-                    <h3>How to Cook</h3>
-
-                    <ol>
-                        <li>Season and fry fish.</li>
-                        <li>Cut potatoes into chips.</li>
-                        <li>Deep fry until crispy.</li>
-                        <li>Serve together.</li>
-                    </ol>
-
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/beaf-stew.jpg" alt="Beef Stew with Rice">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Beef Stew with Rice</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 90 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Beef, rice, onions, tomatoes</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Brown beef, simmer with tomatoes until tender, and serve with rice.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Recipe 4 -->
-            <div class="recipe-box">
-
-                <img src="../images/spaghetti-meat.jpg" alt="Spaghetti">
-
-                <div class="recipe-content">
-
-                    <h2>Spaghetti with Minced Meat</h2>
-
-                    <h3>Ingredients</h3>
-
-                    <ul>
-                        <li>1 packet spaghetti</li>
-                        <li>300g minced meat</li>
-                        <li>Tomato sauce</li>
-                        <li>1 onion</li>
-                    </ul>
-
-                    <h3>How to Cook</h3>
-
-                    <ol>
-                        <li>Boil spaghetti.</li>
-                        <li>Cook minced meat.</li>
-                        <li>Add sauce and spices.</li>
-                        <li>Serve hot.</li>
-                    </ol>
-
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/fish-chips.jpg" alt="Fried Fish with Chips">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fried Fish with Chips</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Fish fillets, potatoes, oil</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Fry chips until crispy and fry seasoned fish; serve with lemon.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Recipe 5 -->
-            <div class="recipe-box">
-
-                <img src="../images/chapati-beans.jpg" alt="Chapati and Beans">
-
-                <div class="recipe-content">
-
-                    <h2>Chapati with Beans Stew</h2>
-
-                    <h3>Ingredients</h3>
-
-                    <ul>
-                        <li>3 cups flour</li>
-                        <li>2 cups beans</li>
-                        <li>1 onion</li>
-                        <li>2 tomatoes</li>
-                    </ul>
-
-                    <h3>How to Cook</h3>
-
-                    <ol>
-                        <li>Prepare chapati dough.</li>
-                        <li>Cook chapatis.</li>
-                        <li>Cook beans stew.</li>
-                        <li>Serve while hot.</li>
-                    </ol>
-
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/spaghetti-meat.jpg" alt="Spaghetti with Minced Meat">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Spaghetti with Minced Meat</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Spaghetti, minced meat, tomato sauce</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Cook spaghetti and simmer meat sauce; combine and serve.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
                 </div>
 
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/chapati-beans.jpg" alt="Chapati with Beans Stew">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chapati with Beans Stew</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 45 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Flour, cooked beans, tomatoes, onions</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Cook chapatis and serve with a hearty beans stew.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
 
+    <script src="../script.js"></script>
 </body>
 </html>

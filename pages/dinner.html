@@ -9,44 +9,46 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header class="header">
-
         <div class="container nav-container">
-
             <div class="nav-left">
-
                 <div class="logo">
-                    <i class="fa fa-leaf"></i>
+                    <i class="fas fa-leaf"></i>
                     <h1>Melvine Cooks</h1>
                 </div>
 
-                <nav>
-                    <a href="../index.html">HOME</a>
-                    <a href="breakfast.html" class="active">BREAKFAST</a>
-                    <a href="lunch.html">LUNCH</a>
-                    <a href="dinner.html">DINNER</a>
-                    <a href="supper.html">SUPPER</a>
+                <nav class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="breakfast.html" class="nav-link">BREAKFAST</a>
+                    <a href="lunch.html" class="nav-link">LUNCH</a>
+                    <a href="dinner.html" class="nav-link active">DINNER</a>
+                    <a href="supper.html" class="nav-link">SUPPER</a>
                 </nav>
-
             </div>
 
             <div class="nav-right">
-                <button class="btn-subscribe">Subscribe</button>
+                <a href="../subscribe.html" class="btn-subscribe"><i class="fas fa-bell"></i> Subscribe</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
         </div>
-
     </header>
 
 
@@ -69,149 +71,115 @@
 
 
     <!-- DINNER RECIPES -->
-    <section class="dinner-recipes">
-
+    <section class="meal-section" id="dinner">
         <div class="container">
-
-            <!-- RECIPE 1 -->
-            <div class="recipe-box">
-
-                <img src="../images/sukumawiki.jpg" alt="Ugali with Sukuma Wiki">
-
-                <div class="recipe-content">
-
-                    <h2>1. Ugali with Sukuma Wiki</h2>
-
-      <h3>Ingredients:</h3>
-      <ul>
-        <li>Maize flour</li>
-        <li>Water</li>
-        <li>Sukuma wiki (kale)</li>
-        <li>Onion</li>
-        <li>Cooking oil</li>
-        <li>Salt</li>
-      </ul>
-
-      <h3>How to Cook:</h3>
-      <ol>
-        <li>Boil water and slowly add maize flour while stirring.</li>
-        <li>Cook until it becomes thick ugali.</li>
-        <li>Fry onions in oil.</li>
-        <li>Add sukuma wiki and cook until soft.</li>
-      </ol>
-    </div>
+            <div class="section-header">
+                <h2>Dinner Recipes</h2>
+                <p>Comforting dinners to end the day on a high note.</p>
             </div>
 
-    <!--Recipe 2 -->
-    <div class="recipe-box">
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/sukumawiki.jpg" alt="Ugali with Sukuma Wiki">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Ugali with Sukuma Wiki</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 40 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Maize flour</li>
+                            <li>Sukuma wiki (kale)</li>
+                            <li>Onion and oil</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Prepare ugali by cooking maize flour with water until thick.</li>
+                            <li>Sauté sukuma wiki with onion and serve together.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
 
-                <img src="../images/pilau.jpg" alt="Pilau">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/pilau.jpg" alt="Pilau">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Pilau</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 60 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Rice, meat, pilau spice</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Sauté spices and meat, add rice and cook until tender.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
 
-                <div class="recipe-content">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/chapati-beans.jpg" alt="Chapati with Beans">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chapati with Beans</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 45 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Flour, water, cooked beans, onions, tomatoes</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Make chapati dough, cook on pan and serve with bean stew.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
 
-                    <h2>2. Pilau</h2>
-      <h3>Ingredients:</h3>
-      <ul>
-        <li>Rice</li>
-        <li>Beef or chicken</li>
-        <li>Pilau masala</li>
-        <li>Onion</li>
-        <li>Garlic & ginger</li>
-      </ul>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/nyama-choma.jpg" alt="Nyama Choma">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Nyama Choma (Grilled Meat)</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 50 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Meat, garlic, lemon, salt</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Marinate meat and grill until cooked through.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
 
-      <h3>How to Cook:</h3>
-      <ol>
-        <li>Fry onions until brown.</li>
-        <li>Add meat and cook well.</li>
-        <li>Add spices and mix.</li>
-        <li>Add rice and water, then simmer until cooked.</li>
-      </ol>
-    </div>
-    </div>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="../images/vegetable-rice.jpg" alt="Vegetable Rice">
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Vegetable Rice</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Rice, carrots, peas, corn, onions</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Cook vegetables, add rice and simmer until tender.</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <!--Recipe 3 -->
-    <div class="recipe-box">
-
-                <img src="../images/chapati-beans.jpg" alt="Chapati with Beans">
-
-                <div class="recipe-content">
-      <h2>3. Chapati with Beans</h2>
-
-      <h3>Ingredients:</h3>
-      <ul>
-        <li>Flour</li>
-        <li>Beans</li>
-        <li>Onion</li>
-        <li>Tomatoes</li>
-        <li>Cooking oil</li>
-      </ul>
-
-      <h3>How to Cook:</h3>
-      <ol>
-        <li>Make chapati dough and roll flat circles.</li>
-        <li>Cook on a hot pan with oil.</li>
-        <li>Boil beans until soft.</li>
-        <li>Fry onions and tomatoes, then add beans.</li>
-      </ol>
-    </div>
-    </div>
-
-    <!--Recipe 4 -->
-    <div class="recipe-box">
-
-                <img src="../images/nyama-choma.jpg" alt="Nyama Choma (Grilled Meat)">
-
-                <div class="recipe-content">
-
-                    <h2>4. Nyama Choma (Grilled Meat)</h2>
-
-      <h3>Ingredients:</h3>
-      <ul>
-        <li>Goat or beef meat</li>
-        <li>Salt</li>
-        <li>Lemon</li>
-        <li>Garlic</li>
-      </ul>
-
-      <h3>How to Cook:</h3>
-      <ol>
-        <li>Season meat with salt, lemon, and garlic.</li>
-        <li>Let it rest for 30 minutes.</li>
-        <li>Grill over charcoal until well cooked.</li>
-      </ol>
-    </div>
-    </div>
-
-    <!--Recipe 5 -->
-    <div class="recipe-box">
-
-                <img src="../images/vegetable-rice.jpg" alt="Vegetable Rice">
-
-                <div class="recipe-content">
-
-                    <h2>5. Vegetable Rice</h2>
-
-      <h3>Ingredients:</h3>
-      <ul>
-        <li>Rice</li>
-        <li>Carrots</li>
-        <li>Peas</li>
-        <li>Corn</li>
-        <li>Onion</li>
-      </ul>
-
-      <h3>How to Cook:</h3>
-      <ol>
-        <li>Boil rice until half cooked.</li>
-        <li>Fry onions and vegetables.</li>
-        <li>Add rice and mix well.</li>
-        <li>Steam until ready.</li>
-      </ol>
-    </div>
-    </div>
-
-  </section>
-
+    <script src="../script.js"></script>
 </body>
 </html>

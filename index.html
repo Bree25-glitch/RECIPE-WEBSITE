@@ -3,219 +3,843 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melvine Cooks - Easy Home Cooking Recipes</title>
+    <title>Melvine Cooks - Premium Home Cooking Recipes</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
 
-    <!-- HEADER -->
+    <!-- HEADER/NAVIGATION -->
     <header class="header">
-
         <div class="container nav-container">
-
             <div class="nav-left">
-
                 <div class="logo">
-                    <i class="fa fa-leaf"></i>
+                    <i class="fas fa-leaf"></i>
                     <h1>Melvine Cooks</h1>
                 </div>
 
-                <nav>
-                    <a href="index.html" class="active">RECIPES</a>
-                    <a href="pages/breakfast.html">BREAKFAST</a>
-                    <a href="pages/lunch.html">LUNCH</a>
-                    <a href="pages/dinner.html">DINNER</a>
-                    <a href="pages/supper.html">SUPPER</a>
-                    <a href="subscribe.html">SUBSCRIBE</a>
+                <nav class="nav-menu">
+                    <a href="#top" class="nav-link active">HOME</a>
+                    <a href="#breakfast" class="nav-link">BREAKFAST</a>
+                    <a href="#lunch" class="nav-link">LUNCH</a>
+                    <a href="#dinner" class="nav-link">DINNER</a>
+                    <a href="#supper" class="nav-link">SUPPER</a>
+                    <a href="#subscribe" class="nav-link">SUBSCRIBE</a>
                 </nav>
-
             </div>
 
             <div class="nav-right">
-                <a href="subscribe.html" class="btn-subscribe">Subscribe</a>
+                <a href="#subscribe" class="btn-subscribe"><i class="fas fa-bell"></i> Subscribe</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
         </div>
-
     </header>
-
-
 
     <!-- HERO SECTION -->
     <section class="hero">
-
         <div class="container hero-content">
-
             <div class="hero-text">
-
-                <p class="small-text">Over 200+ Recipes</p>
-
-                <h2>
-                    Easy Home <br>
-                    Cooking Recipes
-                </h2>
-
-                <p>
-                    Discover delicious and easy-to-make recipes
-                    for every occasion. From breakfast to dinner,
-                    we have something tasty for everyone.
-                </p>
-
-                <a href="#" class="btn-primary">
-                    Join Us
-                </a>
-
+                <p class="small-text">🍽️ Over 50+ Delicious Recipes</p>
+                <h2>Easy Home <br> Cooking Made Simple</h2>
+                <p>Discover mouthwatering, easy-to-follow recipes for every meal. From quick breakfasts to hearty dinners, create restaurant-quality meals in your kitchen.</p>
+                <a href="#breakfast" class="btn-primary">Start Cooking Now</a>
             </div>
-
             <div class="hero-image">
-                <img src="images/pizza-hero.jpg" alt="Delicious Pizza">
+                <img src="images/pizza-hero.jpg" alt="Delicious food">
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- CATEGORIES -->
+    <!-- CATEGORY CARDS -->
     <section class="categories">
-
         <div class="container category-container">
-
-            <a href="pages/breakfast.html" class="category-card">
-                <i class="fa fa-coffee cat-icon"></i>
-                <p>BREAKFAST</p>
+            <a href="#breakfast" class="category-card">
+                <div class="card-icon"><i class="fas fa-sun"></i></div>
+                <h3>BREAKFAST</h3>
+                <p>Start your day right</p>
                 <span class="count">4 Recipes</span>
             </a>
 
-            <a href="pages/lunch.html" class="category-card">
-                <i class="fa fa-cutlery cat-icon"></i>
-                <p>LUNCH</p>
+            <a href="#lunch" class="category-card">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <h3>LUNCH</h3>
+                <p>Midday delights</p>
                 <span class="count">5 Recipes</span>
             </a>
 
-            <a href="pages/supper.html" class="category-card">
-                <i class="fa fa-fire cat-icon"></i>
-                <p>SUPPER</p>
-                <span class="count">5 Recipes</span>
-            </a>
-
-            <a href="pages/dinner.html" class="category-card">
-                <i class="fa fa-spoon cat-icon"></i>
-                <p>DINNER</p>
+            <a href="#dinner" class="category-card">
+                <div class="card-icon"><i class="fas fa-fire"></i></div>
+                <h3>DINNER</h3>
+                <p>Evening favorites</p>
                 <span class="count">4 Recipes</span>
             </a>
 
+            <a href="#supper" class="category-card">
+                <div class="card-icon"><i class="fas fa-moon"></i></div>
+                <h3>SUPPER</h3>
+                <p>Light evening meals</p>
+                <span class="count">5 Recipes</span>
+            </a>
         </div>
-
     </section>
 
-
-
-    <!-- LATEST RECIPES -->
-    <section class="latest-recipe">
-
+    <!-- LATEST RECIPES CAROUSEL -->
+    <section class="carousel-section">
         <div class="container">
-
             <div class="section-header">
-
                 <h2>Latest Recipes</h2>
+                <p>Trending dishes everyone is cooking</p>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-                <div class="arrows">
-                    <button><i class="fa fa-arrow-left"></i></button>
-                    <button><i class="fa fa-arrow-right"></i></button>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <!-- Recipe 1 -->
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="images/pizza-hero.jpg" alt="Homemade Pizza">
+                                <span class="recipe-badge">Trending</span>
+                            </div>
+                            <div class="carousel-info">
+                                <h3>Homemade Pizza</h3>
+                                <p class="prep-time"><i class="fas fa-clock"></i> 50 mins</p>
+                                <p class="description">Delicious homemade pizza with fresh toppings and crispy crust.</p>
+                                <button class="btn-recipe">View Recipe</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 2 -->
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="images/grilled salmon.jpg" alt="Grilled Salmon">
+                                <span class="recipe-badge">Healthy</span>
+                            </div>
+                            <div class="carousel-info">
+                                <h3>Grilled Salmon</h3>
+                                <p class="prep-time"><i class="fas fa-clock"></i> 25 mins</p>
+                                <p class="description">Premium grilled salmon with fresh herbs and lemon seasoning.</p>
+                                <button class="btn-recipe">View Recipe</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 3 -->
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="images/spaghetti bolognese.jpg" alt="Spaghetti Bolognese">
+                                <span class="recipe-badge">Classic</span>
+                            </div>
+                            <div class="carousel-info">
+                                <h3>Spaghetti Bolognese</h3>
+                                <p class="prep-time"><i class="fas fa-clock"></i> 45 mins</p>
+                                <p class="description">Traditional Italian pasta with rich meat sauce and parmesan.</p>
+                                <button class="btn-recipe">View Recipe</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 4 -->
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="images/chicken-pasta.jpg" alt="Chicken Pasta">
+                                <span class="recipe-badge">Popular</span>
+                            </div>
+                            <div class="carousel-info">
+                                <h3>Creamy Chicken Pasta</h3>
+                                <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                                <p class="description">Silky creamy pasta with tender chicken and fresh herbs.</p>
+                                <button class="btn-recipe">View Recipe</button>
+                            </div>
+                        </div>
+
+                        <!-- Recipe 5 -->
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                                <span class="recipe-badge">Favorite</span>
+                            </div>
+                            <div class="carousel-info">
+                                <h3>BBQ Grilled Chicken</h3>
+                                <p class="prep-time"><i class="fas fa-clock"></i> 35 mins</p>
+                                <p class="description">Marinated grilled chicken with smoky BBQ flavors and herbs.</p>
+                                <button class="btn-recipe">View Recipe</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-
-            <div class="recipe-grid">
-
-                <!-- CARD 1 -->
-                <a href="recipes/breakfast-2-baked-eggs.html" class="recipe-card">
-
-                    <img src="images/Baked egg.jpg" alt="Baked Eggs">
-
-                    <h3>Baked Eggs</h3>
-
-                    <p>
-                        A delicious breakfast recipe with eggs,
-                        cheese, and vegetables baked perfectly.
-                    </p>
-
-                </a>
-
-
-                <!-- CARD 2 -->
-                <a href="recipes/lunch-1-chicken-salad.html" class="recipe-card">
-
-                    <img src="images/chicken salad.jpg" alt="Chicken Salad">
-
-                    <h3>Chicken Salad</h3>
-
-                    <p>
-                        A refreshing lunch with tender chicken,
-                        fresh vegetables, and tasty dressing.
-                    </p>
-
-                </a>
-
-
-                <!-- CARD 3 -->
-                <a href="recipes/supper-1-spaghetti-bolognese.html" class="recipe-card">
-
-                    <img src="images/spaghetti bolognese.jpg" alt="Spaghetti Bolognese">
-
-                    <h3>Spaghetti Bolognese</h3>
-
-                    <p>
-                        Rich Italian spaghetti with savory meat sauce,
-                        tomatoes, onions, and herbs.
-                    </p>
-
-                </a>
-
-
-                <!-- CARD 4 -->
-                <a href="recipes/dinner-1-grilled-salmon.html" class="recipe-card">
-
-                    <img src="images/grilled salmon.jpg" alt="Grilled Salmon">
-
-                    <h3>Grilled Salmon</h3>
-
-                    <p>
-                        Healthy grilled salmon seasoned with herbs
-                        and cooked to perfection.
-                    </p>
-
-                </a>
-
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
+                <span class="indicator" data-index="4"></span>
             </div>
-
         </div>
-
     </section>
 
+    <!-- BREAKFAST SECTION -->
+    <section class="meal-section" id="breakfast">
+        <div class="container">
+            <div class="section-header">
+                <h2>Breakfast Recipes</h2>
+                <p>Start your morning with delicious homemade meals</p>
+            </div>
 
+            <div class="recipes-grid">
+                <!-- Recipe 1 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/pancakes.jpg" alt="Fluffy Pancakes">
+                        <span class="recipe-badge">Easy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fluffy Pancakes</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 20 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>2 cups all-purpose flour</li>
+                            <li>2 tbsp sugar</li>
+                            <li>1 tbsp baking powder</li>
+                            <li>2 large eggs</li>
+                            <li>1.5 cups milk</li>
+                            <li>2 tbsp melted butter</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Whisk flour, sugar, baking powder, and salt</li>
+                            <li>Mix eggs, milk, and melted butter</li>
+                            <li>Combine wet and dry ingredients</li>
+                            <li>Heat pan with butter</li>
+                            <li>Pour 1/4 cup batter per pancake</li>
+                            <li>Cook until bubbles form, flip</li>
+                            <li>Serve with syrup and fruit</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/Baked egg.jpg" alt="Baked Eggs">
+                        <span class="recipe-badge">Quick</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Baked Eggs</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 15 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>4 large eggs</li>
+                            <li>1/2 cup grated cheese</li>
+                            <li>1 tomato, chopped</li>
+                            <li>1/4 cup milk</li>
+                            <li>Salt and pepper</li>
+                            <li>Herbs (optional)</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Preheat oven to 180°C</li>
+                            <li>Grease baking dish</li>
+                            <li>Crack eggs into dish</li>
+                            <li>Pour milk around eggs</li>
+                            <li>Add cheese and tomato</li>
+                            <li>Bake 12-15 minutes</li>
+                            <li>Serve with toast</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/french-toast.jpg" alt="French Toast">
+                        <span class="recipe-badge">Easy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>French Toast</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 15 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>4 slices bread</li>
+                            <li>2 large eggs</li>
+                            <li>1/2 cup milk</li>
+                            <li>1 tbsp sugar</li>
+                            <li>1/2 tsp cinnamon</li>
+                            <li>Butter for frying</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Whisk eggs, milk, sugar, cinnamon</li>
+                            <li>Dip bread slices in mixture</li>
+                            <li>Heat butter in pan</li>
+                            <li>Cook until golden both sides</li>
+                            <li>Serve with honey or syrup</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/smoothie.jpg" alt="Fruit Smoothie">
+                        <span class="recipe-badge">Healthy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fruit Smoothie</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 5 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>2 bananas</li>
+                            <li>1 cup strawberries</li>
+                            <li>1 cup milk or yogurt</li>
+                            <li>1 tbsp honey</li>
+                            <li>Ice cubes</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Add all ingredients to blender</li>
+                            <li>Blend until smooth</li>
+                            <li>Adjust consistency with milk</li>
+                            <li>Pour into glass</li>
+                            <li>Serve immediately</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUNCH SECTION -->
+    <section class="meal-section" id="lunch">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lunch Recipes</h2>
+                <p>Delicious and satisfying meals for midday</p>
+            </div>
+
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/chicken-pasta.jpg" alt="Chicken Pasta">
+                        <span class="recipe-badge">Popular</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chicken Pasta</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>200g pasta</li>
+                            <li>Chicken breast</li>
+                            <li>Cooking cream</li>
+                            <li>Garlic (3 cloves)</li>
+                            <li>Salt and pepper</li>
+                            <li>Parmesan cheese</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Boil pasta until al dente</li>
+                            <li>Cook chicken in pan</li>
+                            <li>Add garlic and sauté</li>
+                            <li>Pour in cream</li>
+                            <li>Mix with pasta</li>
+                            <li>Top with cheese</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/burger.jpg" alt="Beef Burger">
+                        <span class="recipe-badge">Favorite</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Beef Burger</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 20 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Burger buns</li>
+                            <li>Beef patty</li>
+                            <li>Cheese slices</li>
+                            <li>Lettuce</li>
+                            <li>Tomatoes</li>
+                            <li>Pickles & sauce</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Form beef patty</li>
+                            <li>Cook on hot grill</li>
+                            <li>Toast burger buns</li>
+                            <li>Layer lettuce and tomato</li>
+                            <li>Add cheese and patty</li>
+                            <li>Top with sauce</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/fried-rice.jpg" alt="Fried Rice">
+                        <span class="recipe-badge">Quick</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fried Rice</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 25 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Cooked rice</li>
+                            <li>Mixed vegetables</li>
+                            <li>Eggs (2)</li>
+                            <li>Soy sauce</li>
+                            <li>Cooking oil</li>
+                            <li>Green onions</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Heat oil in wok</li>
+                            <li>Scramble eggs and remove</li>
+                            <li>Stir-fry vegetables</li>
+                            <li>Add rice and mix</li>
+                            <li>Add soy sauce</li>
+                            <li>Return eggs and serve</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/chicken salad.jpg" alt="Chicken Salad">
+                        <span class="recipe-badge">Healthy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chicken Salad</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 15 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Cooked chicken</li>
+                            <li>Mixed greens</li>
+                            <li>Cherry tomatoes</li>
+                            <li>Cucumber</li>
+                            <li>Olive oil</li>
+                            <li>Lemon juice</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Chop cooked chicken</li>
+                            <li>Wash and tear greens</li>
+                            <li>Chop vegetables</li>
+                            <li>Mix in large bowl</li>
+                            <li>Drizzle oil and lemon</li>
+                            <li>Toss and serve</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/chapati-beans.jpg" alt="Chapati & Beans">
+                        <span class="recipe-badge">Traditional</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Chapati & Beans</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 40 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Flour</li>
+                            <li>Canned beans</li>
+                            <li>Onions</li>
+                            <li>Tomatoes</li>
+                            <li>Cooking oil</li>
+                            <li>Salt and spices</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Make dough with flour</li>
+                            <li>Roll into thin circles</li>
+                            <li>Cook on hot pan</li>
+                            <li>Sauté onions in pot</li>
+                            <li>Add beans and tomatoes</li>
+                            <li>Simmer and serve</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DINNER SECTION -->
+    <section class="meal-section" id="dinner">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dinner Recipes</h2>
+                <p>Impressive dinners for special evenings</p>
+            </div>
+
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/grilled-fish.jpg" alt="Grilled Fish">
+                        <span class="recipe-badge">Elegant</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Grilled Fish</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Fresh fish fillet</li>
+                            <li>Lemon</li>
+                            <li>Garlic</li>
+                            <li>Olive oil</li>
+                            <li>Herbs</li>
+                            <li>Salt and pepper</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Pat fish dry</li>
+                            <li>Season with salt and herbs</li>
+                            <li>Brush with olive oil</li>
+                            <li>Grill 4-5 mins per side</li>
+                            <li>Top with lemon and garlic</li>
+                            <li>Serve with vegetables</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/spaghetti bolognese.jpg" alt="Spaghetti Bolognese">
+                        <span class="recipe-badge">Classic</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Spaghetti Bolognese</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 45 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Spaghetti pasta</li>
+                            <li>Ground beef</li>
+                            <li>Tomato sauce</li>
+                            <li>Onion & garlic</li>
+                            <li>Olive oil</li>
+                            <li>Parmesan cheese</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Boil pasta until al dente</li>
+                            <li>Brown ground beef</li>
+                            <li>Sauté onion and garlic</li>
+                            <li>Add tomato sauce</li>
+                            <li>Simmer 20 minutes</li>
+                            <li>Serve over pasta</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                        <span class="recipe-badge">Healthy</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Grilled Chicken</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 35 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Chicken breasts</li>
+                            <li>Olive oil</li>
+                            <li>Garlic</li>
+                            <li>Lemon juice</li>
+                            <li>Herbs</li>
+                            <li>Salt and pepper</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Marinate chicken in oil</li>
+                            <li>Add garlic and herbs</li>
+                            <li>Let sit 30 minutes</li>
+                            <li>Grill 6-8 mins per side</li>
+                            <li>Rest for 5 minutes</li>
+                            <li>Serve with vegetables</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/nyama-choma.jpg" alt="Nyama Choma">
+                        <span class="recipe-badge">BBQ</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Nyama Choma</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 45 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Beef cuts</li>
+                            <li>Salt</li>
+                            <li>Pepper</li>
+                            <li>Lemon juice</li>
+                            <li>Garlic</li>
+                            <li>Oil</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Cut beef into chunks</li>
+                            <li>Season generously</li>
+                            <li>Let marinate 15 mins</li>
+                            <li>Grill over charcoal</li>
+                            <li>Cook to desired doneness</li>
+                            <li>Serve with ugali</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPER SECTION -->
+    <section class="meal-section" id="supper">
+        <div class="container">
+            <div class="section-header">
+                <h2>Supper Recipes</h2>
+                <p>Light and comforting evening meals</p>
+            </div>
+
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/vegetable-rice.jpg" alt="Vegetable Rice">
+                        <span class="recipe-badge">Vegetarian</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Vegetable Rice</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 25 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Rice</li>
+                            <li>Mixed vegetables</li>
+                            <li>Onion</li>
+                            <li>Garlic</li>
+                            <li>Butter</li>
+                            <li>Herbs</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Heat butter in pot</li>
+                            <li>Sauté onion and garlic</li>
+                            <li>Add rice and stir</li>
+                            <li>Pour water</li>
+                            <li>Add vegetables</li>
+                            <li>Simmer until rice cooked</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/sukumawiki.jpg" alt="Sukuma Wiki">
+                        <span class="recipe-badge">Traditional</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Sukuma Wiki</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 15 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Kale or spinach</li>
+                            <li>Onion</li>
+                            <li>Tomato</li>
+                            <li>Cooking oil</li>
+                            <li>Salt and pepper</li>
+                            <li>Garlic</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Chop greens finely</li>
+                            <li>Heat oil in pan</li>
+                            <li>Sauté onion and garlic</li>
+                            <li>Add tomato</li>
+                            <li>Add greens and stir</li>
+                            <li>Cook until tender</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/pilau.jpg" alt="Pilau">
+                        <span class="recipe-badge">Aromatic</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Pilau</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 40 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Basmati rice</li>
+                            <li>Meat</li>
+                            <li>Spices</li>
+                            <li>Onion</li>
+                            <li>Garlic</li>
+                            <li>Butter</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Brown meat with spices</li>
+                            <li>Add onion and garlic</li>
+                            <li>Toast rice briefly</li>
+                            <li>Add water and boil</li>
+                            <li>Simmer covered</li>
+                            <li>Serve hot</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/fish-chips.jpg" alt="Fish & Chips">
+                        <span class="recipe-badge">Comfort Food</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Fish & Chips</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 30 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Fish fillets</li>
+                            <li>Potatoes</li>
+                            <li>Flour</li>
+                            <li>Egg</li>
+                            <li>Oil for frying</li>
+                            <li>Lemon</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Cut potatoes into chips</li>
+                            <li>Deep fry until golden</li>
+                            <li>Season with salt</li>
+                            <li>Coat fish in flour and egg</li>
+                            <li>Deep fry fish</li>
+                            <li>Serve with lemon sauce</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/grilled salmon.jpg" alt="Grilled Salmon">
+                        <span class="recipe-badge">Premium</span>
+                    </div>
+                    <div class="recipe-info">
+                        <h3>Grilled Salmon</h3>
+                        <p class="prep-time"><i class="fas fa-clock"></i> 25 mins</p>
+                        <h4>Ingredients:</h4>
+                        <ul class="ingredients-list">
+                            <li>Salmon fillet</li>
+                            <li>Lemon</li>
+                            <li>Olive oil</li>
+                            <li>Fresh herbs</li>
+                            <li>Garlic</li>
+                            <li>Salt and pepper</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol class="instructions-list">
+                            <li>Season salmon fillet</li>
+                            <li>Brush with olive oil</li>
+                            <li>Place on grill mat</li>
+                            <li>Grill skin-side 5 mins</li>
+                            <li>Flip and grill 3-4 mins</li>
+                            <li>Serve with lemon</li>
+                        </ol>
+                        <button class="btn-recipe">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSCRIBE SECTION -->
+    <section class="subscribe-section" id="subscribe">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get weekly recipes and cooking tips delivered to your inbox</p>
+                <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer>
-
+    <footer class="footer">
         <div class="container">
-            <p>© 2026 Melvine Cooks | All Rights Reserved</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Melvine Cooks</h3>
+                    <p>Your ultimate destination for delicious, easy-to-follow recipes for every occasion.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#breakfast">Breakfast</a></li>
+                        <li><a href="#lunch">Lunch</a></li>
+                        <li><a href="#dinner">Dinner</a></li>
+                        <li><a href="#supper">Supper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Melvine Cooks. All rights reserved. | Crafted with <i class="fas fa-heart"></i> for food lovers.</p>
+            </div>
         </div>
-
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
